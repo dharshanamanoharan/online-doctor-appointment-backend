@@ -60,7 +60,14 @@ public class UserController {
         ) {
             String password="";
             String role="";
-            Set<String> roles = Collections.singleton("ROLE_USER");
+            Set<String> roles;
+            if(userId==1)
+            {
+               roles = Collections.singleton("ROLE_ADMIN");
+            }
+            else {
+                roles = Collections.singleton("ROLE_USER");
+            }
             //roles.add("");
             User user = userService.updateUserById(userId,file,firstName,lastName,userName,email,password,role,roles);
             if (user != null)

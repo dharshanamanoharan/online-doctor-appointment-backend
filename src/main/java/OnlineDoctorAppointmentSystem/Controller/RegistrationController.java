@@ -75,7 +75,7 @@ public class RegistrationController {
                mail.setEmailSubject("Verifying the Registration");
                mail.setEmailMessage("Greetings! Hello "+user.getFirstName()+" "+user.getLastName()+". Please click the link to verify your account: "+url);
                log.info("Greetings! Hello "+user.getFirstName()+" "+user.getLastName()+". Please click the link to verify your account: "+url);
-               //String mailStatus=userService.sendSimpleMail(mail);
+               String mailStatus=userService.sendSimpleMail(mail);
                return new ResponseEntity<>("Verification Link Sent", HttpStatus.OK);
            }
            else

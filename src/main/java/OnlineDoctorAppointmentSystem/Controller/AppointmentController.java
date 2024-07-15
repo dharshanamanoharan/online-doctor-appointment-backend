@@ -62,7 +62,7 @@ public class AppointmentController {
                     " for Patient Name: "+appointmentDetails.getPatientFirstName()+" "+appointmentDetails.getPatientLastName()+
                     " scheduled on Date: "+appointment.getSlotDate()+", "+ "Time: "+
                     appointment.getSlot()+"-"+appointment.getSlotTime()+" is "+appointment.getStatus()+" !");
-            //userService.sendSimpleMail(mail1);
+            userService.sendSimpleMail(mail1);
             log.info("Appointment Details: " +"Hello "+user.getFirstName()+" "+user.getLastName()+
                     "! Your appointment Status with Dr."+doctor.getFirstName()+" "+doctor.getLastName() +
                     " for Patient Name: "+appointmentDetails.getPatientFirstName()+" "+appointmentDetails.getPatientLastName()+
@@ -78,7 +78,7 @@ public class AppointmentController {
                         " for Patient Name: " + appointmentDetails.getPatientFirstName() + " " + appointmentDetails.getPatientLastName() +
                         " scheduled on Date: " + appointment.getSlotDate() + ", " + "Time: " +
                         appointment.getSlot() + "-" + appointment.getSlotTime() + " is " + appointment.getStatus() + " !");
-               // userService.sendSimpleMail(mail2);
+               userService.sendSimpleMail(mail2);
             }
             //Appointment Request Mail for Doctor
             SendEmailModel mail3 = new SendEmailModel();
@@ -88,7 +88,7 @@ public class AppointmentController {
                     " ! You have a new appointment request scheduled on Date: "+appointment.getSlotDate()+
                     ", "+ "Time: "+appointment.getSlot()+" - "+appointment.getSlotTime()+" for "+appointmentDetails.getPatientVisitReason()+
                     " checkup and it is waiting for your approval.");
-            //userService.sendSimpleMail(mail3);
+            userService.sendSimpleMail(mail3);
             log.info("Appointment Request:"+" Hello "+"Dr."+doctor.getFirstName()+" "+doctor.getLastName() +
                     " ! You have a new appointment request scheduled on Date: "+appointment.getSlotDate()+
                     ", "+ "Time: "+appointment.getSlot()+" - "+appointment.getSlotTime()+" for "+appointmentDetails.getPatientVisitReason()+
@@ -134,7 +134,7 @@ public class AppointmentController {
                     " for Patient Name: "+appointmentDetails.getPatientFirstName()+" "+appointmentDetails.getPatientLastName()+
                     " scheduled on Date: "+appointment.getSlotDate()+", "+ "Time: "+
                     appointment.getSlot()+"-"+appointment.getSlotTime()+" is "+appointment.getStatus()+" !");
-            //userService.sendSimpleMail(mail1);
+            userService.sendSimpleMail(mail1);
             log.info("Appointment Status Update: " +"Hello "+user.getFirstName()+" "+user.getLastName()+
                     "! Your appointment Status with Dr."+doctor.getFirstName()+" "+doctor.getLastName() +
                     " for Patient Name: "+appointmentDetails.getPatientFirstName()+" "+appointmentDetails.getPatientLastName()+
@@ -150,7 +150,7 @@ public class AppointmentController {
                         " for Patient Name: "+appointmentDetails.getPatientFirstName()+" "+appointmentDetails.getPatientLastName()+
                         " scheduled on Date: "+appointment.getSlotDate()+", "+ "Time: "+
                         appointment.getSlot()+" - "+appointment.getSlotTime()+" is "+appointment.getStatus()+" !");
-                //userService.sendSimpleMail(mail2);
+                userService.sendSimpleMail(mail2);
                 log.info("Appointment Status Update: " +"Hello "+user.getFirstName()+" "+user.getLastName()+
                         "! Your appointment Status with Dr."+doctor.getFirstName()+" "+doctor.getLastName() +
                         " for Patient Name: "+appointmentDetails.getPatientFirstName()+" "+appointmentDetails.getPatientLastName()+
